@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45312F5C1C499B5C00A96E39 /* sl_btn_login_facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F5A1C499B5C00A96E39 /* sl_btn_login_facebook@2x.png */; };
+		45312F5D1C499B5C00A96E39 /* sl_btn_login_facebook@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F5B1C499B5C00A96E39 /* sl_btn_login_facebook@3x.png */; };
+		45312F601C499B6600A96E39 /* sl_btn_login_twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F5E1C499B6600A96E39 /* sl_btn_login_twitter@2x.png */; };
+		45312F611C499B6600A96E39 /* sl_btn_login_twitter@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F5F1C499B6600A96E39 /* sl_btn_login_twitter@3x.png */; };
+		45312F641C499B7300A96E39 /* btn_login_email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F621C499B7300A96E39 /* btn_login_email@2x.png */; };
+		45312F651C499B7300A96E39 /* btn_login_email@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F631C499B7300A96E39 /* btn_login_email@3x.png */; };
 		45F80D661C48EF8D00531E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D651C48EF8D00531E68 /* AppDelegate.swift */; };
 		45F80D681C48EF8D00531E68 /* SLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D671C48EF8D00531E68 /* SLViewController.swift */; };
 		45F80D6B1C48EF8D00531E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F80D691C48EF8D00531E68 /* Main.storyboard */; };
@@ -38,6 +44,12 @@
 
 /* Begin PBXFileReference section */
 		1B6D1B271C874B779359120D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		45312F5A1C499B5C00A96E39 /* sl_btn_login_facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sl_btn_login_facebook@2x.png"; sourceTree = "<group>"; };
+		45312F5B1C499B5C00A96E39 /* sl_btn_login_facebook@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sl_btn_login_facebook@3x.png"; sourceTree = "<group>"; };
+		45312F5E1C499B6600A96E39 /* sl_btn_login_twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sl_btn_login_twitter@2x.png"; sourceTree = "<group>"; };
+		45312F5F1C499B6600A96E39 /* sl_btn_login_twitter@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sl_btn_login_twitter@3x.png"; sourceTree = "<group>"; };
+		45312F621C499B7300A96E39 /* btn_login_email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_login_email@2x.png"; sourceTree = "<group>"; };
+		45312F631C499B7300A96E39 /* btn_login_email@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_login_email@3x.png"; sourceTree = "<group>"; };
 		45F80D621C48EF8D00531E68 /* SocialLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F80D651C48EF8D00531E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F80D671C48EF8D00531E68 /* SLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +95,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45312F561C499B2400A96E39 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				45312F591C499B4500A96E39 /* native */,
+				45312F581C499B4000A96E39 /* facebook */,
+				45312F571C499B3400A96E39 /* twitter */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		45312F571C499B3400A96E39 /* twitter */ = {
+			isa = PBXGroup;
+			children = (
+				45312F5E1C499B6600A96E39 /* sl_btn_login_twitter@2x.png */,
+				45312F5F1C499B6600A96E39 /* sl_btn_login_twitter@3x.png */,
+			);
+			name = twitter;
+			sourceTree = "<group>";
+		};
+		45312F581C499B4000A96E39 /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				45312F5A1C499B5C00A96E39 /* sl_btn_login_facebook@2x.png */,
+				45312F5B1C499B5C00A96E39 /* sl_btn_login_facebook@3x.png */,
+			);
+			name = facebook;
+			sourceTree = "<group>";
+		};
+		45312F591C499B4500A96E39 /* native */ = {
+			isa = PBXGroup;
+			children = (
+				45312F621C499B7300A96E39 /* btn_login_email@2x.png */,
+				45312F631C499B7300A96E39 /* btn_login_email@3x.png */,
+			);
+			name = native;
+			sourceTree = "<group>";
+		};
 		45F80D591C48EF8D00531E68 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				45F80D991C48F72500531E68 /* SLAuthenticationManager.swift */,
+				45312F561C499B2400A96E39 /* Assets */,
 				45F80D9B1C4909EE00531E68 /* Buttons */,
 			);
 			name = SocialLoginLibrary;
@@ -280,8 +330,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45312F601C499B6600A96E39 /* sl_btn_login_twitter@2x.png in Resources */,
+				45312F5C1C499B5C00A96E39 /* sl_btn_login_facebook@2x.png in Resources */,
+				45312F651C499B7300A96E39 /* btn_login_email@3x.png in Resources */,
 				45F80D701C48EF8D00531E68 /* LaunchScreen.storyboard in Resources */,
 				45F80D6D1C48EF8D00531E68 /* Assets.xcassets in Resources */,
+				45312F5D1C499B5C00A96E39 /* sl_btn_login_facebook@3x.png in Resources */,
+				45312F611C499B6600A96E39 /* sl_btn_login_twitter@3x.png in Resources */,
+				45312F641C499B7300A96E39 /* btn_login_email@2x.png in Resources */,
 				45F80D6B1C48EF8D00531E68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

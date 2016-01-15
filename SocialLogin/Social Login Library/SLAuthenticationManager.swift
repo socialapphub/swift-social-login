@@ -39,7 +39,17 @@ class SLAuthenticationManager: NSObject {
     
     var delegate:SLDelegate? //variabile delegato
     
-    static let manager = SLAuthenticationManager() //singleton
+    //singleton
+    class var manager: SLAuthenticationManager {
+        struct Static {
+            static var onceToken: dispatch_once_t = 0
+            static var instance: SLAuthenticationManager? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = SLAuthenticationManager()
+        }
+        return Static.instance!
+    }
     
     //Buttons
     var fbLoginButton : SLFbLoginButton! //type: UIButton
@@ -54,9 +64,9 @@ class SLAuthenticationManager: NSObject {
     override init() {
         super.init()
         initFacebook()
-        initTwitter()
-        initNativeLogin()
-        initNativeRegistration()
+//        initTwitter()
+//        initNativeLogin()
+//        initNativeRegistration()
     }
     
     // MARK: Init private methods social

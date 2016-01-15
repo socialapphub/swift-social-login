@@ -26,6 +26,7 @@ class SLFbLoginButton: UIButton {
     }
     
     func login(){
-        SLAuthenticationManager.manager.loginWithFacebook();
+        //TODO: da sistemare
+       // SLAuthenticationManager.manager.loginWithFacebook();
     }
 }

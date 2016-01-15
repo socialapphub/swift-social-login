@@ -13,23 +13,42 @@ import FBSDKLoginKit
 import TwitterKit
 import Fabric
 
-class ViewController: UIViewController, SLDelegate {
-
+class SLViewController: UIViewController, SLDelegate {
+    
     var authenticationManager:SLAuthenticationManager!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-       // self.authenticationManager.delegate = self;
+        self.authenticationManager = SLAuthenticationManager()
+        self.insertFacebookLoginButton()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-        //Facebook Delegates
+    
+    
+    //MARK: Buttons
+    
+    func insertFacebookLoginButton(){
+        self.authenticationManager.setFbReadPermission(["public_profile",  "email"]) //si settano i permessi di fb
+        self.authenticationManager.fbLoginButton = SLFbLoginButton.init()
+        self.authenticationManager.fbLoginButton.backgroundColor = UIColor.clearColor()
+        self.authenticationManager.fbLoginButton.center = self.view.center
+        self.authenticationManager.fbLoginButton.frame = CGRectMake(self.authenticationManager.fbLoginButton.frame.origin.x, 100, 177, 40)
+        self.authenticationManager.fbLoginButton.center = self.view.center
+        self.authenticationManager.fbLoginButton.setBackgroundImage(UIImage.init(named: "sl_btn_login_facebook"), forState: UIControlState.Normal)
+        self.view.addSubview(self.authenticationManager.fbLoginButton)
+    }
+    
+    
+    //MARK: Authentication Manager Delegate
+    
+    //Facebook Delegates
     func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult){
         
     }
