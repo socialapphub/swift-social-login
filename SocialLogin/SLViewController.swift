@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SLViewController.swift
 //  SocialLogin
 //
 //  Created by Paolo Musolino on 15/01/16.
