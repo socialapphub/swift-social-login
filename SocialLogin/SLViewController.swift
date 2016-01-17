@@ -42,6 +42,7 @@ class SLViewController: UIViewController, SLDelegate {
         self.authenticationManager.loginWithFacebook()
     }
     @IBAction func twitter(sender: AnyObject) {
+        self.authenticationManager.loginWithTwitter()
     }
     @IBAction func email(sender: AnyObject) {
     }
@@ -66,38 +67,16 @@ class SLViewController: UIViewController, SLDelegate {
     }
     
     //Twitter Delegates
-    func twitterLoginButtonPressed(){
-        
-    }
-    
     func twitterLoggedInUser(session:TWTRSession){
-        
+        print("login twitter")
     }
     
     func twitterHandleError(error:NSError){
-        
+        print("error twitter")
     }
     
     func twitterLoggedOutUser(){
-        
-    }
-    
-    //Native Login Delegates
-    func tapOnNativeLoginButton(){
-        
-    }
-    
-    func requestOfNativeLoginWithEmail(email:String, password:String){
-        
-    }
-    
-    //Native Registration Delegates
-    func tapOnNativeRegistrationButton(){
-        
-    }
-    
-    func requestOfNativeRegistrationWithEmail(email:String, password:String, name:String, surname:String){
-        
+        print("logout twitter")
     }
     
 }

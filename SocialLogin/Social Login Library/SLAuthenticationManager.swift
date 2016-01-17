@@ -21,18 +21,9 @@ protocol SLDelegate:class{
     func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError)
     
     //Twitter Delegates
-    func twitterLoginButtonPressed()
     func twitterLoggedInUser(session:TWTRSession)
     func twitterHandleError(error:NSError)
     func twitterLoggedOutUser()
-    
-    //Native Login Delegates
-    func tapOnNativeLoginButton()
-    func requestOfNativeLoginWithEmail(email:String, password:String)
-    
-    //Native Registration Delegates
-    func tapOnNativeRegistrationButton()
-    func requestOfNativeRegistrationWithEmail(email:String, password:String, name:String, surname:String)
 }
 
 class SLAuthenticationManager: NSObject {
@@ -46,43 +37,22 @@ class SLAuthenticationManager: NSObject {
     var fbLoginManager : FBSDKLoginManager! //facebook login manager
     var readPermissions : NSMutableArray! //facebook read permission
     
+    // MARK: Init
     override init() {
         super.init()
         initFacebook()
-//        initTwitter()
-//        initNativeLogin()
-//        initNativeRegistration()
+        initTwitter()
     }
     
-    // MARK: Init private methods social
     private func initFacebook(){
         self.fbLoginManager = FBSDKLoginManager.init()
         self.readPermissions = NSMutableArray()
     }
     
     private func initTwitter(){
-        //se c'è già un utente loggato, allora configura twitter usando Fabric
-        if Twitter.sharedInstance().session()?.userName != nil{
-            Fabric.with([Twitter.sharedInstance()])
-        }
-        
-        //controlla se un utente è loggato o meno, e ad ogni modo configura Fabric.
-        Twitter.sharedInstance().logInWithCompletion { (session, error) -> Void in
-            Fabric.with([Twitter.sharedInstance()])
-            if session != nil{
-                self.delegate?.twitterLoggedInUser(session!)
-            }
-            else{
-                self.delegate?.twitterHandleError(error!)
-            }
-        }
+        Fabric.with([Twitter.self])
     }
     
-    private func initNativeLogin(){
-    }
-    
-    private func initNativeRegistration(){
-    }
     
     // MARK: Facebook methods
     func setFbReadPermission(permission:NSArray){
@@ -112,16 +82,15 @@ class SLAuthenticationManager: NSObject {
     }
     
     // MARK: Twitter methods
-    func twitterButtonPressed(){
+    func loginWithTwitter(){
         
-        self.delegate?.twitterLoginButtonPressed()
-        
+        //controlla se un utente è loggato o meno, e ad ogni modo configura Fabric.
         /**
         *  The completion block to be called with a `TWTRSession` if successful,
         *  and a `NSError` if logging in failed or was canceled.
         */
         Twitter.sharedInstance().logInWithCompletion { (session, error) -> Void in
-            Fabric.with([Twitter.sharedInstance()])
+            Fabric.with([Twitter.self])
             if session != nil{
                 self.delegate?.twitterLoggedInUser(session!)
             }
@@ -139,21 +108,4 @@ class SLAuthenticationManager: NSObject {
         self.delegate?.twitterLoggedOutUser()
     }
     
-    // MARK: Native Login Methods
-    func actionNativeLoginButton(){
-        self.delegate?.tapOnNativeLoginButton()
-    }
-    
-    func nativeLogin(email:String, password:String){
-        self.delegate?.requestOfNativeLoginWithEmail(email, password: password)
-    }
-    
-    // MARK: Native Registration Methods
-    func actionNativeRegistrationButton(){
-        self.delegate?.tapOnNativeRegistrationButton()
-    }
-    
-    func nativeRegistration(email:String, password:String, name:String, username:String){
-        self.delegate?.requestOfNativeRegistrationWithEmail(email, password: password, name: name, surname: username)
-    }
 }

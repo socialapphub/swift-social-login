@@ -5,8 +5,6 @@ PODS:
   - Bolts/AppLinks (1.6.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.6.0)
-  - Crashlytics (3.6.0):
-    - Fabric (~> 1.6.3)
   - Fabric (1.6.3)
   - FBSDKCoreKit (4.9.0):
     - Bolts (~> 1.5)
@@ -18,7 +16,6 @@ PODS:
     - TwitterCore (= 1.15.1)
 
 DEPENDENCIES:
-  - Crashlytics
   - Fabric
   - FBSDKLoginKit (~> 4.8)
   - TwitterCore
@@ -26,7 +23,6 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
-  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
   Fabric: cbe0ca6c9531bba17910052f6f105fcbc5fa7f67
   FBSDKCoreKit: c4f25d27949a6ac80206063804d12ad1c7879612
   FBSDKLoginKit: d46210c3955d69337c61325327f486ca50a8661f
