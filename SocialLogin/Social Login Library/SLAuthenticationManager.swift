@@ -42,20 +42,12 @@ class SLAuthenticationManager: NSObject {
     //singleton
     static let sharedInstance = SLAuthenticationManager()
     
-    
-    //Buttons
-    var fbLoginButton : UIButton! //type: UIButton
-    var twitterLoginButton: UIButton! //type: UIButton
-    var nativeLoginButton : UIButton! //type: UIButton
-    var nativeRegisterButton : UIButton! //type: UIButton
-    
     //Facebook
     var fbLoginManager : FBSDKLoginManager! //facebook login manager
     var readPermissions : NSMutableArray! //facebook read permission
     
     override init() {
         super.init()
-        print("entra qui")
         initFacebook()
 //        initTwitter()
 //        initNativeLogin()
@@ -65,12 +57,7 @@ class SLAuthenticationManager: NSObject {
     // MARK: Init private methods social
     private func initFacebook(){
         self.fbLoginManager = FBSDKLoginManager.init()
-        self.fbLoginButton = UIButton.init()
-        self.fbLoginButton.userInteractionEnabled = true
         self.readPermissions = NSMutableArray()
-        
-        //catturo quando il pulsante login twitter è stato premuto
-        self.fbLoginButton.addTarget(self, action: Selector("loginWithFacebook"), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     private func initTwitter(){
@@ -89,19 +76,12 @@ class SLAuthenticationManager: NSObject {
                 self.delegate?.twitterHandleError(error!)
             }
         }
-        
-        
-        //catturo quando il pulsante login twitter è stato premuto
-        self.twitterLoginButton.addTarget(self, action: Selector(twitterButtonPressed()), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     private func initNativeLogin(){
-        //catturo quando il pulsante login twitter è stato premuto
-        self.nativeLoginButton.addTarget(self, action: Selector(actionNativeLoginButton()), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     private func initNativeRegistration(){
-        self.nativeRegisterButton.addTarget(self, action: Selector(actionNativeRegistrationButton()), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     // MARK: Facebook methods

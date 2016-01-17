@@ -15,14 +15,19 @@ import Fabric
 
 class SLViewController: UIViewController, SLDelegate {
     
+    @IBOutlet weak var fbLoginButton: UIButton!
+    @IBOutlet weak var twitterLoginButton: UIButton!
+    @IBOutlet weak var emailLoginButton: UIButton!
+    @IBOutlet weak var signupButton: UIButton!
+    
     let authenticationManager: SLAuthenticationManager = SLAuthenticationManager.sharedInstance
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.insertFacebookLoginButton()
         self.authenticationManager.delegate = self
+        self.authenticationManager.setFbReadPermission(["public_profile",  "email"])
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,17 +36,18 @@ class SLViewController: UIViewController, SLDelegate {
     }
     
     
-    //MARK: Buttons
-    func insertFacebookLoginButton(){
-        
-        self.authenticationManager.setFbReadPermission(["public_profile",  "email"]) //si settano i permessi di fb
-        self.authenticationManager.fbLoginButton.backgroundColor = UIColor.clearColor()
-        self.authenticationManager.fbLoginButton.center = self.view.center
-        self.authenticationManager.fbLoginButton.frame = CGRectMake(self.authenticationManager.fbLoginButton.frame.origin.x, 100, 177, 40)
-        self.authenticationManager.fbLoginButton.center = self.view.center
-        self.authenticationManager.fbLoginButton.setBackgroundImage(UIImage.init(named: "sl_btn_login_facebook"), forState: UIControlState.Normal)
-        self.view.addSubview(self.authenticationManager.fbLoginButton)
+    //MARK: Buttons Action
+    
+    @IBAction func facebook(sender: AnyObject) {
+        self.authenticationManager.loginWithFacebook()
     }
+    @IBAction func twitter(sender: AnyObject) {
+    }
+    @IBAction func email(sender: AnyObject) {
+    }
+    @IBAction func signup(sender: AnyObject) {
+    }
+    
     
     
     //MARK: Authentication Manager Delegate
