@@ -21,7 +21,6 @@
 		45F80D7B1C48EF8D00531E68 /* SocialLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D7A1C48EF8D00531E68 /* SocialLoginTests.swift */; };
 		45F80D861C48EF8D00531E68 /* SocialLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D851C48EF8D00531E68 /* SocialLoginUITests.swift */; };
 		45F80D9A1C48F72500531E68 /* SLAuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D991C48F72500531E68 /* SLAuthenticationManager.swift */; };
-		45F80D9D1C490A0500531E68 /* SLFbLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D9C1C490A0500531E68 /* SLFbLoginButton.swift */; };
 		B151DBB652ECB77C3CF37EF5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6DB2599D7665B60336F3D13 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +63,6 @@
 		45F80D851C48EF8D00531E68 /* SocialLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginUITests.swift; sourceTree = "<group>"; };
 		45F80D871C48EF8D00531E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45F80D991C48F72500531E68 /* SLAuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLAuthenticationManager.swift; sourceTree = "<group>"; };
-		45F80D9C1C490A0500531E68 /* SLFbLoginButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFbLoginButton.swift; sourceTree = "<group>"; };
 		5054DDDEDD148CEBFDF99FE4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E6DB2599D7665B60336F3D13 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -191,18 +189,9 @@
 			children = (
 				45F80D991C48F72500531E68 /* SLAuthenticationManager.swift */,
 				45312F561C499B2400A96E39 /* Assets */,
-				45F80D9B1C4909EE00531E68 /* Buttons */,
 			);
 			name = SocialLoginLibrary;
 			path = "Social Login Library";
-			sourceTree = "<group>";
-		};
-		45F80D9B1C4909EE00531E68 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				45F80D9C1C490A0500531E68 /* SLFbLoginButton.swift */,
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		9996B1E3FED0B2852D503739 /* Frameworks */ = {
@@ -411,7 +400,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F80D9D1C490A0500531E68 /* SLFbLoginButton.swift in Sources */,
 				45F80D681C48EF8D00531E68 /* SLViewController.swift in Sources */,
 				45F80D9A1C48F72500531E68 /* SLAuthenticationManager.swift in Sources */,
 				45F80D661C48EF8D00531E68 /* AppDelegate.swift in Sources */,

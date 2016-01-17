@@ -15,15 +15,14 @@ import Fabric
 
 class SLViewController: UIViewController, SLDelegate {
     
-    var authenticationManager:SLAuthenticationManager!
+    let authenticationManager: SLAuthenticationManager = SLAuthenticationManager.sharedInstance
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        self.authenticationManager = SLAuthenticationManager()
         self.insertFacebookLoginButton()
+        self.authenticationManager.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,10 +32,9 @@ class SLViewController: UIViewController, SLDelegate {
     
     
     //MARK: Buttons
-    
     func insertFacebookLoginButton(){
+        
         self.authenticationManager.setFbReadPermission(["public_profile",  "email"]) //si settano i permessi di fb
-        self.authenticationManager.fbLoginButton = SLFbLoginButton.init()
         self.authenticationManager.fbLoginButton.backgroundColor = UIColor.clearColor()
         self.authenticationManager.fbLoginButton.center = self.view.center
         self.authenticationManager.fbLoginButton.frame = CGRectMake(self.authenticationManager.fbLoginButton.frame.origin.x, 100, 177, 40)
@@ -50,15 +48,15 @@ class SLViewController: UIViewController, SLDelegate {
     
     //Facebook Delegates
     func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult){
-        
+        print("login fb")
     }
     
     func fbLoggedOutUser(){
-        
+        print("logout fb")
     }
     
     func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError){
-        
+        print("errore fb")
     }
     
     //Twitter Delegates

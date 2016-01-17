@@ -40,19 +40,11 @@ class SLAuthenticationManager: NSObject {
     var delegate:SLDelegate? //variabile delegato
     
     //singleton
-    class var manager: SLAuthenticationManager {
-        struct Static {
-            static var onceToken: dispatch_once_t = 0
-            static var instance: SLAuthenticationManager? = nil
-        }
-        dispatch_once(&Static.onceToken) {
-            Static.instance = SLAuthenticationManager()
-        }
-        return Static.instance!
-    }
+    static let sharedInstance = SLAuthenticationManager()
+    
     
     //Buttons
-    var fbLoginButton : SLFbLoginButton! //type: UIButton
+    var fbLoginButton : UIButton! //type: UIButton
     var twitterLoginButton: UIButton! //type: UIButton
     var nativeLoginButton : UIButton! //type: UIButton
     var nativeRegisterButton : UIButton! //type: UIButton
@@ -63,6 +55,7 @@ class SLAuthenticationManager: NSObject {
     
     override init() {
         super.init()
+        print("entra qui")
         initFacebook()
 //        initTwitter()
 //        initNativeLogin()
@@ -71,8 +64,13 @@ class SLAuthenticationManager: NSObject {
     
     // MARK: Init private methods social
     private func initFacebook(){
-        self.fbLoginButton = SLFbLoginButton.init();
+        self.fbLoginManager = FBSDKLoginManager.init()
+        self.fbLoginButton = UIButton.init()
+        self.fbLoginButton.userInteractionEnabled = true
         self.readPermissions = NSMutableArray()
+        
+        //catturo quando il pulsante login twitter è stato premuto
+        self.fbLoginButton.addTarget(self, action: Selector("loginWithFacebook"), forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     private func initTwitter(){
@@ -114,7 +112,6 @@ class SLAuthenticationManager: NSObject {
     func loginWithFacebook(){
         FBSDKProfile.enableUpdatesOnAccessTokenChange(false)
         self.fbLoginManager.logInWithReadPermissions(readPermissions.copy() as! [AnyObject], fromViewController:nil) { (result, error) -> Void in
-            
             if (error != nil) {
                 self.delegate?.fbLoginViewError(result, error: error);
             }
