@@ -62,7 +62,7 @@ class SLViewController: UIViewController, SLDelegate {
     }
     
     func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError){
-        print("errore fb")
+        print("error fb")
     }
     
     //Twitter Delegates
