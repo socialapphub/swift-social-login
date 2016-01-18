@@ -1,5 +1,5 @@
 //
-//  SLFacebookTests.swift
+//  SLTwitterTests.swift
 //  SocialLogin
 //
 //  Created by Paolo Musolino on 18/01/16.
@@ -8,14 +8,12 @@
 
 import XCTest
 @testable import SocialLogin
-import FacebookSDK
-import FBSDKCoreKit
-import FBSDKLoginKit
+import TwitterKit
+//import Fabric
 
-class SLFacebookTests: XCTestCase, SLDelegate {
+class SLTwitterTests: XCTestCase, SLDelegate {
     
     let authenticationManager: SLAuthenticationManager = SLAuthenticationManager.sharedInstance
-    
     
     override func setUp() {
         super.setUp()
@@ -28,16 +26,17 @@ class SLFacebookTests: XCTestCase, SLDelegate {
         super.tearDown()
     }
     
-    func testFbLogin() {
+    func testTwitterLogin() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
-        XCTAssertNotNil(self.authenticationManager.fbLoginManager)
-        XCTAssertNotNil(self.authenticationManager.readPermissions)
+        XCTAssertNotNil(Twitter.self)
+        XCTAssertNotNil(Twitter.sharedInstance())
     }
     
-    func testFbLogout(){
-        authenticationManager.logoutFromFacebook()
-        XCTAssertNil(FBSDKAccessToken.currentAccessToken())
+    func testTwitterLogout(){
+        authenticationManager.logoutFromTwitter()
+        XCTAssertNil(Twitter.sharedInstance().session())
     }
+    
 }

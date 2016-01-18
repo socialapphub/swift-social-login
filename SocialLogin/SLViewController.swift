@@ -62,7 +62,7 @@ class SLViewController: UIViewController, SLDelegate {
         print("logout fb")
     }
     
-    func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError){
+    func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult?, error:NSError?){
         print("error fb")
     }
     

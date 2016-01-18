@@ -18,7 +18,7 @@ import Fabric
     //Facebook Delegates
     optional func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult)
     optional func fbLoggedOutUser()
-    optional func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError)
+    optional func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult?, error:NSError?)
     
     //Twitter Delegates
     optional func twitterLoggedInUser(session:TWTRSession)
@@ -105,7 +105,7 @@ class SLAuthenticationManager: NSObject {
         Twitter.sharedInstance().logOut()
         Twitter.sharedInstance().logOutGuest()
         
-        self.delegate?.twitterLoggedOutUser!()
+        self.delegate?.twitterLoggedOutUser?()
     }
     
 }

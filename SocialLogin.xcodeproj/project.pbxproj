@@ -14,6 +14,7 @@
 		45312F641C499B7300A96E39 /* btn_login_email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F621C499B7300A96E39 /* btn_login_email@2x.png */; };
 		45312F651C499B7300A96E39 /* btn_login_email@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45312F631C499B7300A96E39 /* btn_login_email@3x.png */; };
 		459FAFC81C4CEAAD002E9275 /* SLFacebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAFC61C4CEAAD002E9275 /* SLFacebookTests.swift */; };
+		459FAFCA1C4D27C5002E9275 /* SLTwitterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459FAFC91C4D27C5002E9275 /* SLTwitterTests.swift */; };
 		45F80D661C48EF8D00531E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D651C48EF8D00531E68 /* AppDelegate.swift */; };
 		45F80D681C48EF8D00531E68 /* SLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F80D671C48EF8D00531E68 /* SLViewController.swift */; };
 		45F80D6B1C48EF8D00531E68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45F80D691C48EF8D00531E68 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		45312F621C499B7300A96E39 /* btn_login_email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_login_email@2x.png"; sourceTree = "<group>"; };
 		45312F631C499B7300A96E39 /* btn_login_email@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_login_email@3x.png"; sourceTree = "<group>"; };
 		459FAFC61C4CEAAD002E9275 /* SLFacebookTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLFacebookTests.swift; sourceTree = "<group>"; };
+		459FAFC91C4D27C5002E9275 /* SLTwitterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SLTwitterTests.swift; sourceTree = "<group>"; };
 		45F80D621C48EF8D00531E68 /* SocialLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45F80D651C48EF8D00531E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45F80D671C48EF8D00531E68 /* SLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				45F80D7A1C48EF8D00531E68 /* SLSingletonTests.swift */,
 				459FAFC61C4CEAAD002E9275 /* SLFacebookTests.swift */,
+				459FAFC91C4D27C5002E9275 /* SLTwitterTests.swift */,
 				45F80D7C1C48EF8D00531E68 /* Info.plist */,
 			);
 			path = SocialLoginTests;
@@ -427,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459FAFCA1C4D27C5002E9275 /* SLTwitterTests.swift in Sources */,
 				459FAFC81C4CEAAD002E9275 /* SLFacebookTests.swift in Sources */,
 				45F80D7B1C48EF8D00531E68 /* SLSingletonTests.swift in Sources */,
 			);

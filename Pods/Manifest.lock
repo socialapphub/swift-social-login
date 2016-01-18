@@ -17,7 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Fabric
-  - FBSDKLoginKit (~> 4.8)
+  - FBSDKLoginKit
   - TwitterCore
   - TwitterKit
 
