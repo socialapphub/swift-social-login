@@ -13,17 +13,17 @@ import FBSDKLoginKit
 import TwitterKit
 import Fabric
 
-protocol SLDelegate:class{
+@objc protocol SLDelegate:class{
     
     //Facebook Delegates
-    func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult)
-    func fbLoggedOutUser()
-    func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError)
+    optional func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult)
+    optional func fbLoggedOutUser()
+    optional func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult, error:NSError)
     
     //Twitter Delegates
-    func twitterLoggedInUser(session:TWTRSession)
-    func twitterHandleError(error:NSError)
-    func twitterLoggedOutUser()
+    optional func twitterLoggedInUser(session:TWTRSession)
+    optional func twitterHandleError(error:NSError)
+    optional func twitterLoggedOutUser()
 }
 
 class SLAuthenticationManager: NSObject {
@@ -63,14 +63,14 @@ class SLAuthenticationManager: NSObject {
         FBSDKProfile.enableUpdatesOnAccessTokenChange(false)
         self.fbLoginManager.logInWithReadPermissions(readPermissions.copy() as! [AnyObject], fromViewController:nil) { (result, error) -> Void in
             if (error != nil) {
-                self.delegate?.fbLoginViewError(result, error: error);
+                self.delegate?.fbLoginViewError?(result, error: error);
             }
             else if result.isCancelled{
                 //Cancelled
-                self.delegate?.fbLoginViewError(result, error: error);
+                self.delegate?.fbLoginViewError?(result, error: error);
             }
             else{
-                self.delegate?.fbLoggedInUser(result)
+                self.delegate?.fbLoggedInUser?(result)
             }
             
         }
@@ -78,7 +78,7 @@ class SLAuthenticationManager: NSObject {
     
     func logoutFromFacebook(){
         self.fbLoginManager.logOut()
-        self.delegate?.fbLoggedOutUser()
+        self.delegate?.fbLoggedOutUser?()
     }
     
     // MARK: Twitter methods
@@ -92,10 +92,10 @@ class SLAuthenticationManager: NSObject {
         Twitter.sharedInstance().logInWithCompletion { (session, error) -> Void in
             Fabric.with([Twitter.self])
             if session != nil{
-                self.delegate?.twitterLoggedInUser(session!)
+                self.delegate?.twitterLoggedInUser?(session!)
             }
             else{
-                self.delegate?.twitterHandleError(error!)
+                self.delegate?.twitterHandleError?(error!)
             }
         }
         
@@ -105,7 +105,7 @@ class SLAuthenticationManager: NSObject {
         Twitter.sharedInstance().logOut()
         Twitter.sharedInstance().logOutGuest()
         
-        self.delegate?.twitterLoggedOutUser()
+        self.delegate?.twitterLoggedOutUser!()
     }
     
 }
