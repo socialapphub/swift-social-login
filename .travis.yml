@@ -1,6 +1,5 @@
 language: objective-c
 osx_image: xcode7.2
-#xcode_project: SocialLogin.xcworkspace
 xcode_scheme: SocialLoginTests
 env:
   global:
