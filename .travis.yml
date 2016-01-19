@@ -1,0 +1,3 @@
+language: objective-c
+xcode_project: SocialLogin.xcworkspace
+xcode_scheme: SocialLogin
