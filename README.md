@@ -6,13 +6,52 @@
 
   
   [![Travis CI](https://travis-ci.org/IQUII/swift-social-login.svg?branch=master)](https://travis-ci.org/IQUII/swift-social-login)
+  ![Language](https://img.shields.io/badge/language-Swift%202-orange.svg)
+  [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+  
+----------------------
 
 A wrap for social login services in a single one intuitive library.
+The library actually support Facebook and Twitter. Soon, new social. We highly appreciate external contributions to our project.
+
+## Installing
+
+[CocoaPods](http://cocoapods.org/) is the recommended way for adding swift-social-login to your project.
+
+---description import---
+
+## Why
+There is no a single way to produce stable code, fast, that is simple to use. The swift social login uniform in a single library the method to login on social networks in a easy single away, that use delegates to return the status in that moment. This uniform the process, and simplify the use of social login in company that use social login very frequently in their app, like IQUII, specially when there is more than one developer.
+
+## How To Use
+First, configure Facebook and Twitter, preferibly using Cocoapods:
+
+* [Facebook configuration](https://developers.facebook.com/docs/ios/getting-started)
+* [Twitter configuration using Fabric](https://docs.fabric.io/ios/fabric/getting-started.html)
+
+Then, import the swift-social-login in your iOS project.
+For a demo, see the example class [SLViewController.swift](https://github.com/IQUII/swift-social-login/blob/master/SocialLogin/SLViewController.swift)
+
+The class to use for the authentication process, using the delegates, is SLAuthenticationManager.swift
 
 
+## Todo
+
+* Linkedin login
+* Google login
+* Instagram login
+* Possibility to declare a closure, not only a delegate
+
+## Contributing
+
+* Create something awesome, make the code better, add some functionality, whatever (this is the hardest part).
+* [Fork it](http://help.github.com/forking/)
+* Create new branch to make your changes
+* Commit all your changes to your branch
+* Submit a [pull request](http://help.github.com/pull-requests/)
 
 
-MIT License
+## MIT License
 ----------------
 The MIT License (MIT)
 
@@ -38,9 +77,6 @@ THE SOFTWARE.
 
 
 
-
-
-Acknowledgements
-----------------
+## Acknowledgements
 
 Made with ❤️ in [IQUII](http://www.iquii.com) by [Paolo Musolino](https://github.com/Codeido)
