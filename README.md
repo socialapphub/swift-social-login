@@ -18,7 +18,7 @@ The library actually support Facebook and Twitter. Soon, new social. We highly a
 
 [CocoaPods](http://cocoapods.org/) is the recommended way for adding swift-social-login to your project.
 
----description import---
+---coming soon---
 
 ## Why
 There is no a single way to produce stable code, fast, that is simple to use. The swift social login uniform in a single library the method to login on social networks in a easy single away, that use delegates to return the status in that moment. This uniform the process, and simplify the use of social login in company that use social login very frequently in their app, like IQUII, specially when there is more than one developer.
@@ -31,8 +31,6 @@ First, configure Facebook and Twitter, preferibly using Cocoapods:
 
 Then, import the swift-social-login in your iOS project.
 For a demo, see the example class [SLViewController.swift](https://github.com/IQUII/swift-social-login/blob/master/SocialLogin/SLViewController.swift)
-
-The class to use for the authentication process, using the delegates, is SLAuthenticationManager.swift
 
 
 ## Todo

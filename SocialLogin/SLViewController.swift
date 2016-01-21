@@ -17,8 +17,6 @@ class SLViewController: UIViewController, SLDelegate {
     
     @IBOutlet weak var fbLoginButton: UIButton!
     @IBOutlet weak var twitterLoginButton: UIButton!
-    @IBOutlet weak var emailLoginButton: UIButton!
-    @IBOutlet weak var signupButton: UIButton!
     
     let authenticationManager: SLAuthenticationManager = SLAuthenticationManager.sharedInstance
     
@@ -43,10 +41,6 @@ class SLViewController: UIViewController, SLDelegate {
     }
     @IBAction func twitter(sender: AnyObject) {
         self.authenticationManager.loginWithTwitter()
-    }
-    @IBAction func email(sender: AnyObject) {
-    }
-    @IBAction func signup(sender: AnyObject) {
     }
     
     

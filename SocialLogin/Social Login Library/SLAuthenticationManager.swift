@@ -16,14 +16,14 @@ import Fabric
 @objc protocol SLDelegate:class{
     
     //Facebook Delegates
-    optional func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult)
-    optional func fbLoggedOutUser()
-    optional func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult?, error:NSError?)
+    @objc optional func fbLoggedInUser(loginResult:FBSDKLoginManagerLoginResult)
+    @objc optional func fbLoggedOutUser()
+    @objc optional func fbLoginViewError(loginResult:FBSDKLoginManagerLoginResult?, error:NSError?)
     
     //Twitter Delegates
-    optional func twitterLoggedInUser(session:TWTRSession)
-    optional func twitterHandleError(error:NSError)
-    optional func twitterLoggedOutUser()
+    @objc optional func twitterLoggedInUser(session:TWTRSession)
+    @objc optional func twitterHandleError(error:NSError)
+    @objc optional func twitterLoggedOutUser()
 }
 
 class SLAuthenticationManager: NSObject {

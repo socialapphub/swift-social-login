@@ -16,53 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ds5-vX-1Kc">
-                                <rect key="frame" x="212" y="211" width="177" height="177"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-nd-u9O" userLabel="Facebook button">
-                                        <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
-                                        <state key="normal" image="sl_btn_login_facebook.png"/>
-                                        <connections>
-                                            <action selector="facebook:" destination="NCS-xZ-3k3" eventType="touchUpInside" id="hyo-Qx-I9p"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vE-7n-Guv" userLabel="Twitter button">
-                                        <rect key="frame" x="0.0" y="50" width="177" height="40"/>
-                                        <state key="normal" image="sl_btn_login_twitter.png"/>
-                                        <connections>
-                                            <action selector="twitter:" destination="NCS-xZ-3k3" eventType="touchUpInside" id="VLG-Ee-AHE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQf-I3-eov" userLabel="Email button">
-                                        <rect key="frame" x="0.0" y="100" width="177" height="40"/>
-                                        <state key="normal" image="btn_login_email.png"/>
-                                        <connections>
-                                            <action selector="email:" destination="NCS-xZ-3k3" eventType="touchUpInside" id="ISF-88-epJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rZ-jt-gju" userLabel="Signup button">
-                                        <rect key="frame" x="0.0" y="150" width="177" height="27"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Sign Up">
-                                            <color key="titleColor" red="0.050980392159999999" green="0.35294117650000001" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signup:" destination="NCS-xZ-3k3" eventType="touchUpInside" id="oZe-5g-i7g"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vE-7n-Guv" userLabel="Twitter button">
+                                <rect key="frame" x="212" y="304" width="177" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="177" id="SSn-sR-1bf"/>
+                                    <constraint firstAttribute="height" constant="40" id="oYe-fq-cZl"/>
+                                </constraints>
+                                <state key="normal" image="sl_btn_login_twitter.png"/>
+                                <connections>
+                                    <action selector="twitter:" destination="NCS-xZ-3k3" eventType="touchUpInside" id="VLG-Ee-AHE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-nd-u9O" userLabel="Facebook button">
+                                <rect key="frame" x="212" y="256" width="177" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Ei-US-cd9"/>
+                                    <constraint firstAttribute="width" constant="177" id="sci-Cf-Ctg"/>
+                                </constraints>
+                                <state key="normal" image="sl_btn_login_facebook.png"/>
+                                <connections>
+                                    <action selector="facebook:" destination="NCS-xZ-3k3" eventType="touchUpInside" id="hyo-Qx-I9p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ds5-vX-1Kc" firstAttribute="centerX" secondItem="zO4-ZY-l0v" secondAttribute="centerX" id="Hvs-gF-xOu"/>
-                            <constraint firstItem="Ds5-vX-1Kc" firstAttribute="centerY" secondItem="zO4-ZY-l0v" secondAttribute="centerY" id="YKh-X8-4tp"/>
+                            <constraint firstItem="6vE-7n-Guv" firstAttribute="centerX" secondItem="zO4-ZY-l0v" secondAttribute="centerX" id="4o1-zP-sh9"/>
+                            <constraint firstItem="6vE-7n-Guv" firstAttribute="centerY" secondItem="zO4-ZY-l0v" secondAttribute="centerY" constant="24" id="TMY-Zc-sOk"/>
+                            <constraint firstItem="DRT-nd-u9O" firstAttribute="centerX" secondItem="zO4-ZY-l0v" secondAttribute="centerX" id="XgN-S5-CmE"/>
+                            <constraint firstItem="DRT-nd-u9O" firstAttribute="centerY" secondItem="zO4-ZY-l0v" secondAttribute="centerY" constant="-24" id="YdM-JL-ORt"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emailLoginButton" destination="PQf-I3-eov" id="NvI-df-6VT"/>
                         <outlet property="fbLoginButton" destination="DRT-nd-u9O" id="efa-Ev-4h7"/>
-                        <outlet property="signupButton" destination="8rZ-jt-gju" id="QdY-8x-s78"/>
                         <outlet property="twitterLoginButton" destination="6vE-7n-Guv" id="bC6-bW-OOl"/>
                     </connections>
                 </viewController>
@@ -72,7 +58,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="btn_login_email.png" width="177" height="40"/>
         <image name="sl_btn_login_facebook.png" width="177" height="40"/>
         <image name="sl_btn_login_twitter.png" width="177" height="40"/>
     </resources>
