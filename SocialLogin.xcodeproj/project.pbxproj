@@ -196,8 +196,7 @@
 				45F80D991C48F72500531E68 /* SLAuthenticationManager.swift */,
 				45312F561C499B2400A96E39 /* Assets */,
 			);
-			name = SocialLoginLibrary;
-			path = "Social Login Library";
+			path = SocialLoginLibrary;
 			sourceTree = "<group>";
 		};
 		9996B1E3FED0B2852D503739 /* Frameworks */ = {
