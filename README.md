@@ -7,7 +7,7 @@
   
   [![Travis CI](https://travis-ci.org/IQUII/swift-social-login.svg?branch=master)](https://travis-ci.org/IQUII/swift-social-login)
   ![Language](https://img.shields.io/badge/language-Swift%202-orange.svg)
-  [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+  [![GitHub license](https://img.shields.io/cocoapods/l/AFNetworking.svg)]()
   
 ----------------------
 
@@ -17,8 +17,6 @@ The library actually support Facebook and Twitter. Soon, new social. We highly a
 ## Installing
 
 [CocoaPods](http://cocoapods.org/) is the recommended way for adding swift-social-login to your project.
-
----coming soon---
 
 ## Why
 There is no a single way to produce stable code, fast, that is simple to use. The swift social login uniform in a single library the method to login on social networks in a easy single away, that use delegates to return the status in that moment. This uniform the process, and simplify the use of social login in company that use social login very frequently in their app, like IQUII, specially when there is more than one developer.
