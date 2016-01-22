@@ -26,7 +26,7 @@ import Fabric
     @objc optional func twitterLoggedOutUser()
 }
 
-class SLAuthenticationManager: NSObject {
+@objc class SLAuthenticationManager: NSObject {
     
     var delegate:SLDelegate? //variabile delegato
     
