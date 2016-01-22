@@ -11,7 +11,7 @@
   
 ----------------------
 
-A wrap for social login services in a single one intuitive library.
+A wrap for social login services in a single one intuitive library, that works with Swift and Objective-C.
 The library actually support Facebook and Twitter. Soon, new social. We highly appreciate external contributions to our project.
 
 ## Installing
