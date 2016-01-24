@@ -37,6 +37,7 @@ For a demo, see the example class [SLViewController.swift](https://github.com/IQ
 * Google login
 * Instagram login
 * Possibility to declare a closure, not only a delegate
+* Import of external pods (Facebook, Twitter, etc...) optional
 
 ## Contributing
 
