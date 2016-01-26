@@ -12,14 +12,14 @@
 ----------------------
 
 A wrap for social login services in a single one intuitive library, that works with Swift and Objective-C.
-The library actually support Facebook and Twitter. Soon, new social. We highly appreciate external contributions to our project.
+The library actually support Facebook and Twitter. Soon, new social networks. We highly appreciate external contributions to our project.
 
 ## Installing
 
 [CocoaPods](http://cocoapods.org/) is the recommended way for adding swift-social-login to your project.
 
 ## Why
-There is no a single way to produce stable code, fast, that is simple to use. The swift social login uniform in a single library the method to login on social networks in a easy single away, that use delegates to return the status in that moment. This uniform the process, and simplify the use of social login in company that use social login very frequently in their app, like IQUII, specially when there is more than one developer.
+There is no a single way to produce stable code, fast, that is simple to use. The swift social login uniforms in a single library the method to login on social networks in a easy single away, that use delegates to return the status in that moment. This uniforms the process, and simplify the use of social login for those who use it very frequently in their app, like IQUII, specially when there is more than one developer.
 
 ## How To Use
 First, configure Facebook and Twitter, preferibly using Cocoapods:
