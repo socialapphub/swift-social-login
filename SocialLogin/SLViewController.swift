@@ -13,9 +13,8 @@ import FBSDKLoginKit
 import TwitterKit
 import Fabric
 
-    
+
 class SLViewController: UIViewController, SLDelegate {
-    
     @IBOutlet weak var fbLoginButton: UIButton!
     @IBOutlet weak var twitterLoginButton: UIButton!
     
