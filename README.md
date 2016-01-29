@@ -16,7 +16,7 @@ The library actually support Facebook and Twitter. Soon, new social networks. We
 
 ## Installing
 
-Import in your Xcode project the class SLAuthenticationManager.swift
+Import in your Xcode project the class `SLAuthenticationManager.swift`
 
 [CocoaPods](http://cocoapods.org/) coming soon.
 
