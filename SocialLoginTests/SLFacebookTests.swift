@@ -8,7 +8,6 @@
 
 import XCTest
 @testable import SocialLogin
-import FacebookSDK
 import FBSDKCoreKit
 import FBSDKLoginKit
 

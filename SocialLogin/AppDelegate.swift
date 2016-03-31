@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FacebookSDK
 import FBSDKCoreKit
 import FBSDKLoginKit
 import TwitterKit
